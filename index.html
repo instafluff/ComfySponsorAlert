@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Comfy Sponsor Alerts</title>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135113520-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-135113520-1');
+        </script>
+        <!-- <link rel="stylesheet" href="web/fonts.css" /> -->
+        <script src="https://cdn.jsdelivr.net/npm/pinkfluffyunicorn@1.0.2/dist/pinkfluffyunicorn.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/reconnecting-websocket@4.4.0/dist/reconnecting-websocket-iife.min.js"></script>
+        <script src="web/comfyalerts.js"></script>
+        <style>
+            * {
+                background-color: transparent;
+                margin: 0;
+                padding: 0;
+                border: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="unicorn-display"></div>
+        <script>
+            const params = new URLSearchParams( location.search );
+            setupGame( "Comfy Sponsor Alerts", {
+                path: "https://www.pixelplush.dev",
+            }, {
+                channel: params.get( "channel" ),
+                oauth: params.get( "oauth" ),
+                volume: params.get( "volume" ),
+            });
+        </script>
+    </body>
+</html>
